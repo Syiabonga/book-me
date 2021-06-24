@@ -24,9 +24,6 @@
                             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                         </ul>
                         </div>
-                        <div class="mobile-menu">
-                            
-                        </div>
                     </div>
                 </nav>
             </div>
@@ -44,9 +41,31 @@
             </center>
         </div>
         </div>
+        <div class="usage-section">
+            <div class="row tex-center">
+                <div class="col-md-4">
+                    <img src="../assets/time.png" alt="">
+                    <p>
+                        Avoid waiting to get a haircut
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../assets/barber.png" alt="">
+                    <p>
+                        Pick your favorite barber in advance
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../assets/feedback.png" alt="">
+                    <p>
+                        Let the others know what you think about your barber
+                    </p>
+                </div>
+            </div>
+        </div>
         <footer>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci a scelerisque purus semper eget. Sed vulputate odio ut enim blandit. Cras semper auctor neque vitae tempus quam pellentesque nec. Amet volutpat consequat mauris nunc congue nisi.
+                © 2021 BookMe. All rights reserved.
             </p>
         </footer>
     </div>
@@ -59,6 +78,7 @@ export default {
 <style lang="scss">
     $bg-banner: #090F1A;
     $costumer-counter-color: #6096FD;
+    $section-background: #fafafa;
     .main-banner{
         background-color: $bg-banner;
         color:white;
@@ -100,12 +120,16 @@ export default {
         transition: 0.5s;
     }
     .section-counter{
-        background-color: #fafafa;
+        background-color: $section-background;
+        min-height: 200px;
+        margin-top: 20px;
+    }
+    .section-counter h1{
+        font-size: 50px;
     }
     .counter {
         max-width: 500px;
         overflow: auto;
-        min-height: 200px;
         margin: auto;
         padding: 30px;
         border-radius: 5px;
@@ -116,13 +140,34 @@ export default {
     .blink-me {
         animation: blinker 1s linear infinite;
     }
-
+    .usage-section{
+        background-color: $section-background;
+        padding: 50px;
+    }
+    .usage-section img{
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+    .usage-section p{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
     @keyframes blinker {
     50% {
         opacity: 0;
     }
     }
-
+    footer{
+        background-image: linear-gradient(76deg, #020f1f, #0f0d2e);
+        color: white;
+        height: 100px;
+    }
+    footer p{
+        text-align: center;
+        padding: 20px;
+    }
 
 
 
@@ -143,6 +188,18 @@ export default {
         .text-center{
             margin-top: 40px;
             font-weight: 900;
+        }
+        .section-counter{
+            padding: 20px;
+        }
+        .section-counter h1{
+            font-size: 50px !important;
+        }
+        .usage-section{
+            padding-top: 0;
+        }
+        .usage-section .col-md-4{
+            margin-top: 30px;
         }
     }
 </style>
